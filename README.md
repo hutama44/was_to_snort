@@ -7,7 +7,3 @@ Requirements:
     PyTenable
     Access key/Secret Key from Tenable.io
 
-Usage:
-    Add the key/secret pair to the script
-    python3 script_name.py
-
