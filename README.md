@@ -5,5 +5,10 @@ Requirements:
 
     Python 3.x
     PyTenable
-    Access key/Secret Key from Tenable.io
+    Access key/Secret Key from Tenable.ioç
+    
+    *** This tool is not an officially supported Tenable project ***
+
+*** Use of this tool is subject to the terms and conditions identified below,
+ and is not subject to any license agreement you may have with Tenable ***
 
