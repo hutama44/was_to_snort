@@ -80,7 +80,7 @@ def printvuln(list2):
     for vuln in list2:
         if vuln["plugin_id"]==98115:
             print(color.BLUE + "URI: " + color.END + vuln['uri'])
-            print(color.BLUE + "Vulnerable Field: " + color.END + vuln['details']['inputName'])
+            print(color.BLUE + "Vulnerable Field: " + color.END + vuln['details']['input_name'])
             print(color.BLUE + "Payload: " + color.END + vuln['details']['payload'])
             for item in vuln['attachments']:
                 if item['attachment_name']=='HTTP Request':
@@ -91,19 +91,20 @@ def printvuln(list2):
                     print(response3.text)
             r = input(color.RED + "Do you want to create a snort rule for this vulnerability? y/n: " + color.END)
             if r =="y":
-                snortrule(vuln['uri'],vuln['details']['inputName'],vuln['details']['payload'],1)
+                snortrule(vuln['uri'],vuln['details']['input_name'],vuln['details']['payload'],1)
             if r =="k":
                 break
             d = input(color.RED + "Do you want to check if this vuln was exploited in the past? y/n: " + color.END)
             if d =="y":
                 path = input(color.CYAN + "Please enter the path for the server access logs: " + color.END)
-                tring = snortrule(vuln['uri'],vuln['details']['inputName'],vuln['details']['payload'],0)
+                tring = snortrule(vuln['uri'],vuln['details']['input_name'],vuln['details']['payload'],0)
                 findpattern(path,tring)
             c = input(color.PURPLE + "Continue? y/n :" + color.END)
             if c=="y":
                 continue
             else:
                 break
+                  
 def printuri(list1):
     print(color.YELLOW + "Fetching list of Scans..." + color.END)
     i = 1 
